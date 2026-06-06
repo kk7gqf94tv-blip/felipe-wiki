@@ -1,0 +1,348 @@
+/* ============================================================
+   FUENTES — Se cargan desde Google Fonts (internet)
+   Creepster  → fuente del título principal (letras de terror)
+   Bebas Neue → fuente de títulos y etiquetas (letras gruesas)
+   Special Elite → fuente del cuerpo (parece máquina de escribir)
+   Si no tienes internet, se usará la fuente por defecto del navegador
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Bebas+Neue&family=Special+Elite&display=swap');
+
+
+/* ============================================================
+   COLORES PRINCIPALES — Cambia estos a tu gusto
+   Para encontrar tu color HEX favorito ve a: coolors.co o
+   simplemente busca "color picker" en Google
+   ============================================================ */
+:root {
+    --rojo:        #ff1a00;   /* 🔴 Color principal — bordes, títulos, detalles */
+    --rojo-oscuro: #8b0000;   /* 🟥 Versión oscura del rojo — fondos de secciones */
+    --fondo:       #080808;   /* ⬛ Fondo principal de toda la página */
+    --fondo2:      #111111;   /* ⬛ Fondo de las tarjetas/entradas */
+    --texto:       #d4d4d4;   /* 🔘 Color del texto normal */
+    --borde:       #2a2a2a;   /* ➖ Color de los bordes de las tarjetas */
+}
+/* EJEMPLOS de combinaciones de colores que puedes probar:
+   Tema azul oscuro:   --rojo: #0066ff  --rojo-oscuro: #003399  --fondo: #050810
+   Tema verde hacker:  --rojo: #00ff41  --rojo-oscuro: #003300  --fondo: #0d0d0d
+   Tema morado:        --rojo: #9b00ff  --rojo-oscuro: #3d0066  --fondo: #080010
+   Tema dorado:        --rojo: #ffd700  --rojo-oscuro: #664400  --fondo: #0a0800
+*/
+
+
+/* ============================================================
+   RESET — Elimina márgenes y padding por defecto del navegador
+   box-sizing: border-box hace que el padding no agrande los elementos
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+/* ============================================================
+   BODY — Estilo base de toda la página
+   font-family: usa la fuente "Special Elite" que cargamos arriba
+   cursor: crosshair cambia el cursor del mouse a una crucita
+   ============================================================ */
+body {
+    background: var(--fondo);   /* usa el color --fondo definido arriba */
+    color: var(--texto);         /* color de todo el texto */
+    font-family: 'Special Elite', cursive;
+    cursor: crosshair;           /* 🎯 cursor en forma de cruz — bórralo si no te gusta */
+}
+
+
+/* ============================================================
+   HEADER — La barra superior con el título grande
+   ============================================================ */
+header {
+    background: #0a0000;         /* 🎨 fondo del header — cámbialo si quieres otro color */
+    border-bottom: 3px solid var(--rojo);  /* línea de color debajo del header */
+    padding: 50px 20px 40px;     /* espacio interior: arriba | lados | abajo */
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   TÍTULO PRINCIPAL — El texto gigante de arriba
+   font-size: clamp(36px, 8vw, 80px) significa:
+     mínimo 36px | preferido 8% del ancho de pantalla | máximo 80px
+   Así se adapta solo a celular y PC
+   ============================================================ */
+.titulo {
+    font-family: 'Creepster', cursive;   /* fuente de terror */
+    font-size: clamp(36px, 8vw, 80px);
+    color: var(--rojo);                  /* color del texto del título */
+    text-shadow:                         /* sombra brillante alrededor del texto */
+        0 0 10px #ff000088,              /* sombra cercana (88 = 50% opacidad) */
+        0 0 30px #ff000044,              /* sombra lejana (44 = 25% opacidad) */
+        3px 3px 0px #000;               /* sombra sólida abajo-derecha */
+    letter-spacing: 4px;                 /* espacio entre letras */
+    animation: pulso 3s ease-in-out infinite;  /* animación definida abajo */
+    line-height: 1.1;
+}
+
+/* ANIMACIÓN del título — hace que el brillo pulse */
+@keyframes pulso {
+    0%, 100% { text-shadow: 0 0 10px #ff000088, 0 0 30px #ff000044, 3px 3px 0px #000; }
+    50%       { text-shadow: 0 0 20px #ff0000cc, 0 0 60px #ff000077, 3px 3px 0px #000; }
+    /* Para desactivar la animación: borra "animation: pulso..." en .titulo */
+}
+
+
+/* ============================================================
+   SUBTÍTULO — Texto pequeño debajo del título
+   ============================================================ */
+.subtitulo {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #555555;              /* 🎨 color gris — cámbialo si quieres */
+    font-size: 16px;
+    letter-spacing: 6px;         /* mucho espacio entre letras */
+    margin-top: 12px;
+}
+
+
+/* ============================================================
+   ADVERTENCIA — La cajita roja debajo del subtítulo
+   ============================================================ */
+.advertencia {
+    display: inline-block;
+    background: var(--rojo-oscuro);  /* fondo de la cajita */
+    color: #ffcccc;                   /* 🎨 color del texto de la advertencia */
+    font-size: 12px;
+    padding: 5px 16px;
+    border-radius: 2px;
+    margin-top: 16px;
+    letter-spacing: 2px;
+    border: 1px solid var(--rojo);
+}
+
+
+/* ============================================================
+   NAVEGACIÓN — La barra de links debajo del header
+   ============================================================ */
+nav {
+    background: #0d0000;         /* 🎨 fondo de la barra de nav */
+    border-bottom: 1px solid #1a0000;
+    padding: 12px 30px;
+    display: flex;               /* pone los elementos en fila */
+    gap: 20px;                   /* espacio entre cada link */
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    overflow-x: auto;            /* scroll horizontal si la pantalla es chica */
+}
+
+nav span { color: #333333; }     /* 🎨 color de los separadores | entre links */
+
+nav a {
+    color: #888888;              /* 🎨 color de los links sin hover */
+    text-decoration: none;       /* quita el subrayado */
+    transition: color 0.2s;      /* animación suave al pasar el mouse */
+}
+nav a:hover { color: var(--rojo); }  /* color al pasar el mouse encima */
+
+
+/* ============================================================
+   CONTENIDO — El área central donde van las entradas
+   max-width: limita el ancho para que no se estire demasiado
+   margin: 0 auto centra el contenido horizontalmente
+   ============================================================ */
+.contenido {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* ============================================================
+   INTRO BOX — La cajita de descripción al inicio
+   ============================================================ */
+.intro-box {
+    border: 1px solid #1e0000;
+    border-left: 4px solid var(--rojo);   /* línea gruesa a la izquierda */
+    background: #0d0000;                  /* 🎨 fondo de la cajita intro */
+    padding: 20px 25px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+}
+
+.intro-box h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--rojo);          /* 🎨 color del título de la intro */
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.intro-box p {
+    font-size: 15px;
+    line-height: 1.8;            /* interlineado — 1.8 = bastante espaciado */
+    color: #999999;              /* 🎨 color del texto de la intro */
+}
+
+
+/* ============================================================
+   ENTRADAS — Las tarjetas de cada expediente/foto
+   ============================================================ */
+.entrada {
+    background: var(--fondo2);   /* fondo de cada tarjeta */
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    margin-bottom: 50px;         /* espacio entre tarjetas */
+    overflow: hidden;
+    transition: border-color 0.3s;  /* animación suave al hover */
+}
+
+.entrada:hover {
+    border-color: var(--rojo-oscuro);  /* borde cambia al pasar el mouse */
+}
+
+
+/* CABECERA de cada tarjeta — barra superior con número y nivel */
+.entrada-header {
+    background: #0d0000;         /* 🎨 fondo de la cabecera de cada tarjeta */
+    padding: 12px 20px;
+    border-bottom: 1px solid #1a0000;
+    display: flex;
+    justify-content: space-between;  /* número a la izq, nivel a la der */
+    align-items: center;
+}
+
+.entrada-numero {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--rojo);          /* 🎨 color del texto "EXPEDIENTE #001" */
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+
+/* BADGES de nivel — las etiquetas de color a la derecha */
+.nivel {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+/* 🎨 Cambia los colores de cada nivel aquí: */
+.nivel.extremo   { background: #2a0000; color: #ff4422; border: 1px solid #ff2200; }  /* rojo */
+.nivel.peligroso { background: #1a1000; color: #ffaa00; border: 1px solid #ff8800; }  /* naranja */
+.nivel.normal    { background: #001a0a; color: #00cc66; border: 1px solid #00aa44; }  /* verde */
+
+
+/* ============================================================
+   IMAGEN de cada entrada
+   
+   📸 CÓMO PONER TUS FOTOS:
+   OPCIÓN A — Desde tu PC (recomendado para GitHub Pages):
+     1. Crea una carpeta llamada "img" en la misma carpeta que index.html
+     2. Mete tu foto ahí (ej: felipe1.jpg)
+     3. En el HTML pon: <img src="img/felipe1.jpg">
+     4. El nombre debe coincidir EXACTAMENTE (mayúsculas incluidas)
+   
+   OPCIÓN B — Desde una URL de internet:
+     1. Sube la foto a imgur.com (gratis, sin cuenta)
+     2. Copia el link directo (termina en .jpg o .png)
+     3. En el HTML pon: <img src="https://i.imgur.com/XXXXX.jpg">
+   
+   object-fit: cover hace que la imagen llene el espacio sin deformarse
+   max-height: limita la altura máxima de la imagen
+   ============================================================ */
+.entrada-img-container {
+    position: relative;
+    background: #0a0a0a;
+    text-align: center;
+    padding: 15px;
+}
+
+.entrada-img-container img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.entrada:hover .entrada-img-container img {
+    transform: scale(1.02);      /* zoom sutil al pasar el mouse — bórralo si no te gusta */
+}
+
+/* Si no tienes foto todavía, se muestra este placeholder */
+.sin-foto {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    background: #0a0000;
+    color: #1a0000;
+}
+
+
+/* ============================================================
+   TEXTO de cada entrada
+   ============================================================ */
+.entrada-info {
+    padding: 25px;               /* espacio interior del texto */
+}
+
+.entrada-info h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #e0e0e0;              /* 🎨 color del título de cada entrada */
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.entrada-info p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #999999;              /* 🎨 color del texto descriptivo */
+    margin-bottom: 16px;
+}
+
+
+/* ============================================================
+   TAGS — Las etiquetas tipo #cursed al final de cada entrada
+   ============================================================ */
+.tags {
+    display: flex;
+    flex-wrap: wrap;             /* se ajustan en varias filas si no caben */
+    gap: 8px;
+}
+
+.tag {
+    background: #1a0000;         /* 🎨 fondo de cada tag */
+    color: #ff6644;              /* 🎨 color del texto de cada tag */
+    border: 1px solid #2a0000;
+    padding: 4px 12px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+/* ============================================================
+   SEPARADOR — La línea decorativa entre entradas
+   ============================================================ */
+.separador {
+    text-align: center;
+    color: #1a0000;              /* 🎨 color del separador — ponlo más claro si quieres verlo */
+    font-size: 24px;
+    margin: 10px 0 40px;
+    letter-spacing: 8px;
+}
+
+
+/* ============================================================
+   FOOTER — La barra inferior
+   ============================================================ */
+footer {
+    border-top: 1px solid #1a0000;
+    padding: 30px;
+    text-align: center;
+    color: #333333;              /* 🎨 color del texto del footer */
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+footer span { color: var(--rojo); }   /* el nombre en el footer usa el color principal */

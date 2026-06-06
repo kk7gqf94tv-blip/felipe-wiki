@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport hace que la página se vea bien en celular también -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>TU PAPI FELIPE CONCEO — Wiki Oficial</title>
+
+    <!-- Conecta este HTML con el archivo style.css
+         Deben estar en la MISMA carpeta para que funcione -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER — Sección superior con el título principal
+     Para cambiar el título: modifica el texto dentro de .titulo
+     Para cambiar el subtítulo: modifica el texto en .subtitulo
+     Para cambiar la advertencia: modifica el texto en .advertencia
+     Los colores se controlan en style.css (busca "HEADER")
+     ============================================================ -->
+<header>
+    <div class="titulo">EL RESUMEN DE LA ANOMALIA LLAMADA FELIPE</div>
+    <div class="subtitulo">La enciclopedia oficial de una entidad superior</div>
+    <div class="advertencia">⚠️ SITIO DE CARÁCTER HISTÓRICO Y CIENTÍFICO ⚠️</div>
+</header>
+
+
+<!-- ============================================================
+     NAVEGACIÓN — Barra de links debajo del header
+     Por ahora los links no llevan a ningún lado (href="#")
+     Más adelante puedes crear secciones y conectarlos
+     Para agregar un link: copia <a href="#">Texto</a> y pega uno más
+     ============================================================ -->
+<nav>
+  
+</nav>
+
+
+<!-- ============================================================
+     CONTENIDO PRINCIPAL — Aquí van todas las entradas/tarjetas
+     max-width y centrado se controlan en style.css (busca "CONTENIDO")
+     ============================================================ -->
+<div class="contenido">
+
+    <!-- ============================================================
+         INTRO BOX — Cajita de presentación al inicio de la página
+         Cambia el texto entre las etiquetas <p>...</p>
+         El título (h2) incluye un emoji — cámbialo si quieres
+         ============================================================ -->
+    <div class="intro-box">
+        <h2>📖 ¿Quién es Felipe de los ñipes?</h2>
+        <p>
+            <!-- 📝 CAMBIA ESTE TEXTO por la descripción de tu amigo Felipe -->
+            Felipe es un adolescente de 14 años de Montería que mide alrededor de 1,50 m, es delgado, tiene el cabello rizado y una habilidad casi sobrenatural para convertir cualquier situación normal en algo absurdamente gracioso. Habla con expresiones muy colombianas como "ijueputa ombe", "joaaaa" o "vaya y coma mierda", se refiere a sus compañeros como "los pelaos del salón" y parece vivir en un estado constante entre la risa, el caos y las referencias a internet. Le gusta Zenless Zone Zero, disfruta haciendo ediciones extrañas con IA, tiene una creatividad bastante peculiar y suele lanzar comentarios o teorías ridículas solo para ver la reacción de los demás. Aunque a veces hace ragebait innecesario y parece empeñado en defender que Montería es la capital del mundo, generalmente es una persona amable, sociable y con un sentido del humor tan surrealista que podría convencerte de que disfrazarse de un cubo amarillo con una cara inquietante es una idea perfectamente razonable.
+        </p>
+    </div>
+
+
+    <!-- ============================================================
+         ENTRADA #001 — Primera tarjeta/expediente
+         
+         ESTRUCTURA de cada entrada:
+         ┌─────────────────────────────────────┐
+         │ .entrada-header (EXPEDIENTE # | NIVEL) │
+         ├─────────────────────────────────────┤
+         │ .entrada-img-container (LA FOTO)    │
+         ├─────────────────────────────────────┤
+         │ .entrada-info                        │
+         │   h2 (título)                        │
+         │   p  (descripción)                   │
+         │   .tags (etiquetas)                  │
+         └─────────────────────────────────────┘
+         ============================================================ -->
+    <div class="entrada">
+
+        <!-- Cabecera: número de expediente y nivel de peligro -->
+        <div class="entrada-header">
+            <!-- 📝 Cambia el número del expediente -->
+            <span class="entrada-numero">EXPEDIENTE #001</span>
+
+            <!-- NIVEL DE PELIGRO — elige una de estas tres clases:
+                 class="nivel extremo"    → rojo
+                 class="nivel peligroso"  → naranja
+                 class="nivel normal"     → verde
+                 📝 Cambia el texto y la clase según quieras -->
+            <span class="nivel extremo">NIVEL: APOCALIPTICO</span>
+        </div>
+
+        <!-- ============================================================
+             FOTO DE FELIPE
+             
+             📸 OPCIÓN A — Desde tu PC (recomendado):
+               - Crea la carpeta "img" en la misma carpeta que este archivo
+               - Mete tu foto ahí, por ejemplo: felipe1.jpg
+               - El src debe ser: src="img/felipe1.jpg"
+               - El nombre del archivo debe coincidir EXACTAMENTE
+                 (si el archivo es "Felipe1.JPG", pon eso tal cual)
+             
+             📸 OPCIÓN B — Desde internet (imgur):
+               - Ve a imgur.com → sube tu foto
+               - Clic derecho en la imagen → "Copiar dirección de imagen"
+               - Pega esa URL en el src: src="https://i.imgur.com/XXXXX.jpg"
+             
+             Si la imagen no carga, se verá el emoji del .sin-foto
+             Para usar el placeholder sin foto: borra el <img> y
+             descomenta el <div class="sin-foto"> de abajo
+             ============================================================ -->
+        <div class="entrada-img-container">
+            <img src="img/felipeatack.png" alt="Felipe - Expediente 1">
+            <!-- PLACEHOLDER si no tienes foto aún.
+                 Para activarlo: borra el <img> de arriba y quita los comentarios de abajo
+            <div class="sin-foto">👁️</div>
+            -->
+        </div>
+
+        <!-- Texto de la entrada -->
+        <div class="entrada-info">
+            <!-- 📝 Cambia el título de esta entrada -->
+            <h2>PRIMER REGISTRO DE LA FORMA CÚBICA</h2>
+
+            <!-- 📝 Cambia la descripción — puedes poner varios párrafos <p> -->
+            <p>
+                
+
+<p>
+    La primera evidencia física de la anomalía <strong>Felipe</strong> ocurrió cuando la entidad utilizó una inteligencia artificial para insertarse dentro de un meme de <strong>Bob Esponja</strong> con estética <strong>trollface-phonk</strong>. Los investigadores asumieron inicialmente que el resultado sería una edición común de internet.
+</p>
+
+<p>
+    <strong>No fue así.</strong>
+</p>
+
+<p>
+    Por razones aún desconocidas, la IA interpretó la solicitud como una orden para convertir a Felipe en una criatura híbrida compuesta por un cuerpo cúbico amarillo, extremidades caricaturescas y una gigantesca cara troll de apariencia perturbadora.
+</p>
+
+<p>
+    Lo más preocupante del incidente no fue el resultado, sino la reacción de la entidad, que aparentemente consideró la imagen un éxito absoluto.
+</p>
+
+<h3>Efectos observados
+
+</h3>
+<p>
+<ul>
+    <li>Confusión inmediata en los testigos.</li>
+    <li>Risas incontrolables.</li>
+    <li>Pérdida temporal de la cordura.</li>
+    <li>Incremento del 300% en la actividad memética.</li>
+</ul>
+<p></p>
+<h3>Conclusión</h3>
+
+<p>
+    Los expertos concluyeron que Felipe posee una capacidad anormal para transformar ideas absurdas en resultados aún más absurdos. La imagen permanece archivada como la primera prueba documentada de que la entidad no debería tener acceso sin supervisión a herramientas de inteligencia artificial.
+</p>
+
+<p>
+    Los intentos de comprender por qué Felipe consideró esto una buena idea continúan sin éxito. A día de hoy, la entidad no muestra señales de arrepentimiento y sigue teniendo acceso a herramientas de inteligencia artificial.
+</p>
+
+<div class="expediente-status">
+    <p><strong>ESTADO:</strong> CONTENIDO</p>
+    <p><strong>RIESGO DE REPETICIÓN:</strong> EXTREMADAMENTE ALTO</p>
+    <p><strong>ÚLTIMAS PALABRAS REGISTRADAS:</strong> <em>"Joaaaa, quedó buenísimo."</em> 😭💀</p>
+</div>
+
+<div class="caption">
+    <em>Figura 1.</em> Manifestación cúbica documentada durante el Incidente Troll-Esponja. Se desconoce por qué la entidad decidió conservar la imagen. Los investigadores tampoco desean averiguarlo.
+</div>
+   
+
+            <!-- TAGS — etiquetas descriptivas
+                 📝 Cambia el texto de cada tag o agrega más copiando el <span class="tag"> -->
+            <div class="tags">
+                <span class="tag">#origen</span>
+                <span class="tag">#primera-aparicion</span>
+                <span class="tag">#cursed</span>
+                <!-- Para agregar más tags, copia esta línea:
+                <span class="tag">#tu-tag</span>
+                -->
+            </div>
+        </div>
+    </div>
+    <!-- FIN ENTRADA #001 -->
+
+
+    <!-- Separador decorativo entre entradas — el color se cambia en style.css -->
+    <div class="separador">— ✦ —</div>
+
+
+    <!-- ============================================================
+         ENTRADA #002
+         📝 Sigue las mismas instrucciones de la Entrada #001
+         ============================================================ -->
+    <div class="entrada">
+        <div class="entrada-header">
+            <span class="entrada-numero">EXPEDIENTE #002</span>
+            <span class="nivel peligroso">NIVEL: PELIGROSO</span>
+        </div>
+
+        <div class="entrada-img-container">
+            <!-- 📸 Cambia "felipe2.jpg" por el nombre de tu segunda foto -->
+            <img src="img/modofueguito.png" alt="Felipe - Expediente 2">
+        </div>
+
+        <div class="entrada-info">
+            <!-- 📝 Cambia título y descripción -->
+            <h2>CUANDO LA ENTIDAD PERDIÓ EL CONTROL 😭💀</h2>
+            <p>
+               <p>
+    Tras el Incidente de la Forma Cúbica, los investigadores creyeron erróneamente que la entidad había alcanzado su límite de inestabilidad memética.
+</p>
+
+<p>
+    Estaban equivocados.
+</p>
+
+<p>
+    Durante una llamada grupal rutinaria, Felipe fue expuesto a una grabación de Tom, de la serie <em>Tom y Jerry</em>, caminando con esmoquin mientras sonaba un phonk de fondo. La secuencia, aparentemente simple para un observador común, produjo efectos devastadores en la entidad.
+</p>
+
+<p>
+    Segundos después de la exposición, Felipe entró en un estado de euforia absoluta. La evidencia visual muestra a la entidad bajo iluminación roja, emitiendo sonidos de alegría extrema y expresiones faciales imposibles de justificar mediante métodos científicos convencionales.
+</p>
+
+<p>
+    Los análisis posteriores concluyeron que Felipe no se estaba riendo de un chiste complejo ni de una situación particularmente elaborada. Se estaba riendo exclusivamente de un gato con traje caminando de forma elegante mientras sonaba phonk.
+</p>
+<p></p>
+<h3>Efectos observados</h3>
+<p></p>
+<ul>
+    <li>Risas explosivas e inmediatas.</li>
+    <li>Pérdida temporal de la capacidad de hablar normalmente.</li>
+    <li>Aumento masivo de energía dentro de la llamada.</li>
+    <li>Contagio de la risa a otros participantes.</li>
+    <li>Colapso completo de cualquier conversación seria.</li>
+</ul>
+<p></p>
+<h3>Conclusión</h3>
+
+<p>
+    El incidente confirmó una teoría previamente discutida por los investigadores: Felipe posee una sensibilidad anormal al humor absurdo. Elementos que una persona promedio consideraría mínimamente divertidos pueden provocar en la entidad una reacción comparable a la observada durante eventos meméticos de gran magnitud.
+</p>
+
+<p>
+    El video de Tom con esmoquin permanece archivado como uno de los detonantes más potentes registrados hasta la fecha.
+</p>
+
+<p>
+    <strong>ESTADO:</strong> Activo.
+</p>
+
+<p>
+    <strong>NIVEL DE PELIGRO:</strong> Peligroso.
+</p>
+
+<p>
+    <strong>CAUSA DEL INCIDENTE:</strong> Tom con traje elegante y phonk.
+</p>
+
+<p>
+    <strong>OBSERVACIÓN FINAL:</strong> La comunidad científica continúa sin comprender por qué esto le pareció tan gracioso.
+</p>
+            </p>
+            <div class="tags">
+                <span class="tag">#evolucion</span>
+                <span class="tag">#fase2</span>
+                <span class="tag">#peligro</span>
+            </div>
+        </div>
+    </div>
+    <!-- FIN ENTRADA #002 -->
+
+
+    <div class="separador">— ✦ —</div>
+
+
+    <!-- ============================================================
+         ENTRADA #003
+         ============================================================ -->
+    <div class="entrada">
+        <div class="entrada-header">
+            <span class="entrada-numero">EXPEDIENTE #003</span>
+            <span class="nivel normal">NIVEL: CONTENIDO</span>
+        </div>
+
+        <div class="entrada-img-container">
+            <!-- 📸 Cambia "felipe3.jpg" por el nombre de tu tercera foto -->
+            <img src="img/novea.png" alt="Felipe - Expediente 3">
+        </div>
+
+        <div class="entrada-info">
+            <h2>El Día Que Estuvo Normal (Casi)</h2>
+            <p>
+               <p>
+    Durante una investigación rutinaria, los expertos descubrieron una imagen donde la entidad Felipe aparece acompañada por una figura femenina de origen desconocido.
+</p>
+
+<p>
+    Durante las primeras horas del análisis, algunos investigadores asumieron que se trataba de una interacción humana legítima. Sin embargo, estudios posteriores revelaron que la acompañante había sido generada mediante inteligencia artificial.
+</p>
+
+<p>
+    El descubrimiento no redujo la extrañeza del fenómeno. Por el contrario, generó nuevas preguntas sobre las motivaciones de la entidad y su relación con herramientas digitales avanzadas.
+</p>
+
+<p>
+    Lo más inquietante del registro es la absoluta normalidad con la que Felipe parece aceptar la situación. Mientras la figura artificial sonríe, la entidad mantiene una expresión neutral, como si compartir espacio con una creación generada por algoritmos fuera un evento cotidiano.
+</p>
+<p></p>
+<h3>Efectos observados</h3>
+<p></p>
+<ul>
+    <li>Confusión inmediata entre los observadores.</li>
+    <li>Debates sobre la autenticidad de la imagen.</li>
+    <li>Incremento del uso de inteligencia artificial por parte de la entidad.</li>
+    <li>Aumento de la actividad memética en grupos de amigos.</li>
+</ul>
+<p></p>
+<h3>Conclusión</h3>
+
+<p>
+    Los investigadores concluyeron que el incidente demuestra una vez más la capacidad de Felipe para producir situaciones extrañas sin mostrar señales de preocupación o vergüenza.
+</p>
+
+<p>
+    La fotografía permanece archivada como el primer caso documentado de interacción entre la entidad y una acompañante completamente sintética.
+</p>
+
+<p>
+    <strong>ESTADO:</strong> Monitoreado.
+</p>
+
+<p>
+    <strong>NIVEL DE PELIGRO:</strong> Desconocido.
+</p>
+
+<p>
+    <strong>CLASIFICACIÓN:</strong> Fenómeno romántico-memético.
+</p>
+
+<p>
+    <strong>OBSERVACIÓN FINAL:</strong> La entidad insiste en que la imagen era simplemente "por la risa".
+</p>
+            </p>
+            <div class="tags">
+                <span class="tag">#raro</span>
+                <span class="tag">#casi-normal</span>
+                <span class="tag">#sospechoso</span>
+            </div>
+        </div>
+    </div>
+    <!-- FIN ENTRADA #003 -->
+
+
+    <!-- ============================================================
+         ➕ PARA AGREGAR MÁS ENTRADAS:
+         
+         1. Copia todo el bloque desde <!-- ENTRADA #00X --> 
+             <!-- FIN ENTRADA #00X -->
+       
+         <div class="separador"> Acabemos con la anomalia de una vez...
+
+</div>
+<!-- FIN CONTENIDO PRINCIPAL -->
+
+
+<!-- ============================================================
+     FOOTER — Barra inferior de la página
+     📝 Cambia el texto del copyright y el chiste final
+     ============================================================ -->
+<footer>
+    <p>© 2026 <span>FELIPE FANDOM WIKI</span> — Todos los derechos reservados a la entidad</p>
+    <!-- 📝 Cambia este texto o bórralo si no lo quieres -->
+    <p style="margin-top:8px; font-size:11px; color:#222;">
+        Este sitio es una broma. Felipe es nuestro papi y lo queremos.
+    </p>
+</footer>
+
+</body>
+</html>
